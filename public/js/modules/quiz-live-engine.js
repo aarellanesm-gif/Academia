@@ -107,17 +107,17 @@ const QuizLiveEngine = (() => {
                 <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid var(--bg-card-border); padding-bottom:0.75rem;">
                     <span style="font-size:0.9rem; color:var(--text-muted);">Generador IA Gemini 3.5/3.6 Flash / Flash-Lite</span>
                     <button class="role-chip" style="background:rgba(234,179,8,0.15); color:#facc15; border:1px solid rgba(234,179,8,0.3);" onclick="QuizLiveEngine.openApiKeysModal()">
-                        <i data-lucide="key" style="width:14px; height:14px;"></i> Configurar API Keys
+                        <i class="fa-solid fa-key" style="font-size:14px;"></i> Configurar API Keys
                     </button>
                 </div>
 
                 <!-- Tabs de Modo: Por Tema o Por Texto -->
                 <div style="display:flex; gap:0.5rem; background:rgba(255,255,255,0.05); padding:0.35rem; border-radius:8px;">
                     <button id="tab-mode-topic" class="role-chip" style="flex:1; text-align:center; padding:0.5rem; background:var(--accent-blue); color:white;" onclick="QuizLiveEngine.switchGeneratorMode('topic')">
-                        <i data-lucide="sparkles"></i> Por Tema / Idea
+                        <i class="fa-solid fa-wand-magic-sparkles"></i> Por Tema / Idea
                     </button>
                     <button id="tab-mode-text" class="role-chip" style="flex:1; text-align:center; padding:0.5rem; background:transparent; color:var(--text-muted);" onclick="QuizLiveEngine.switchGeneratorMode('text')">
-                        <i data-lucide="file-text"></i> Pegar Texto / Apunte
+                        <i class="fa-solid fa-file-lines"></i> Pegar Texto / Apunte
                     </button>
                 </div>
 
@@ -149,7 +149,7 @@ const QuizLiveEngine = (() => {
                     <div style="display:flex; justify-content:flex-end; gap:0.75rem; padding-top:0.5rem;">
                         <button type="button" class="btn-primary" style="background:rgba(255,255,255,0.1); color:var(--text-muted);" onclick="openCourseLessonsModal('${courseId}', '${courseName}')">Volver</button>
                         <button type="submit" id="btn-generate-ai" class="btn-primary" style="background:linear-gradient(135deg, #8b5cf6, #ec4899);">
-                            <i data-lucide="wand-2"></i> Generar Preguntas con IA
+                            <i class="fa-solid fa-wand-magic-sparkles"></i> Generar Preguntas con IA
                         </button>
                     </div>
                 </form>
@@ -159,7 +159,7 @@ const QuizLiveEngine = (() => {
                     <div style="display:flex; justify-content:space-between; align-items:center;">
                         <h4 style="font-size:1.1rem; color:var(--text-main); font-weight:600;">Borrador Generado (Puedes editar u reordenar)</h4>
                         <button class="role-chip" style="background:rgba(16,185,129,0.2); color:#34d399;" onclick="QuizLiveEngine.addNewCustomQuestion()">
-                            <i data-lucide="plus"></i> Añadir Pregunta Manual
+                            <i class="fa-solid fa-plus"></i> Añadir Pregunta Manual
                         </button>
                     </div>
                     <div class="form-group">
@@ -171,7 +171,7 @@ const QuizLiveEngine = (() => {
                     <div style="display:flex; justify-content:flex-end; gap:0.75rem; margin-top:1rem;">
                         <button type="button" class="btn-primary" style="background:rgba(255,255,255,0.1);" onclick="document.getElementById('quiz-preview-editor').style.display='none'; document.getElementById('ai-quiz-generator-form').style.display='flex';">Regenerar</button>
                         <button type="button" class="btn-primary" onclick="QuizLiveEngine.saveCreatedQuiz('${courseId}', '${courseName}')">
-                            <i data-lucide="check-circle"></i> Guardar Quiz en el Curso
+                            <i class="fa-solid fa-circle-check"></i> Guardar Quiz en el Curso
                         </button>
                     </div>
                 </div>
